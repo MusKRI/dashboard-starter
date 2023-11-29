@@ -1,4 +1,3 @@
-import { getCurrentUser } from "@/lib/auth"
 import Header from "@/components/Header"
 import Setting from "@/components/Setting"
 import Sidebar from "@/components/Sidebar"
@@ -11,7 +10,11 @@ export default async function AdminLayout({
 }: {
   children: React.ReactNode
 }) {
-  const user = await getCurrentUser()
+  const user = {
+    name: "Melia",
+    image: "",
+    email: "meliadoha@business.com",
+  }
 
   return (
     <main className='flex min-h-screen'>
